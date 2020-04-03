@@ -118,7 +118,7 @@ def main():
 
     msg("Guardando series de tiempo")
     update_time_series(df, current_time, last_update_time)
-    print(df)
+    #print(df)
 
 try:
     main()

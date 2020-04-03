@@ -94,7 +94,7 @@ def main():
     msg("Leyendo datos del mapa")
     data = get_data()
 
-    msg("Obteniendo fecha de actualización")
+    msg("Obteniendo fecha de actualizacion")
     last_update_time = get_last_update_time()
     if last_update_time is None:
         raise AttributeError("No se pudo recuperar la fecha de actualizacion.")

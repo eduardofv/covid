@@ -74,7 +74,7 @@ def save_daily(df, current_time, last_update_time):
 def update_time_series(df, current_time, last_update_time):
     for col in ['confirmados', 'descartados', 'muertos', 'probables']:
         fname = f"data/sinave/series_tiempo/serie_tiempo_{col}.csv"
-        last_update = last_update_time.strftime("%Y-%m-%d")+"1"
+        last_update = last_update_time.strftime("%Y-%m-%d")
         if os.path.isfile(fname):
             d = pd.read_csv(fname, index_col=0)
             d[last_update] = df[col]

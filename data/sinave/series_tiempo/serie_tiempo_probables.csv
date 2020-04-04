@@ -1,33 +1,33 @@
-Estado,2020-04-02
-Aguascalientes,53
-Baja California,213
-Baja California Sur,62
-Campeche,13
-Chiapas,45
-Chihuahua,24
-Ciudad de México,757
-Coahuila,179
-Colima,12
-Durango,28
-Guanajuato,200
-Guerrero,102
-Hidalgo,65
-Jalisco,638
-Michoacán,71
-Morelos,31
-México,406
-Nayarit,27
-Nuevo León,80
-Oaxaca,46
-Puebla,122
-Queretaro,67
-Quintana Roo,97
-San Luis Potosí,104
-Sinaloa,181
-Sonora,148
-Tabasco,277
-Tamaulipas,70
-Tlaxcala,76
-Veracruz,353
-Yucatán,72
-Zacatecas,34
+Estado,2020-04-02,2020-04-03
+Aguascalientes,53,43
+Baja California,213,231
+Baja California Sur,62,78
+Campeche,13,21
+Chiapas,45,46
+Chihuahua,24,39
+Ciudad de México,757,862
+Coahuila,179,226
+Colima,12,16
+Durango,28,26
+Guanajuato,200,237
+Guerrero,102,108
+Hidalgo,65,71
+Jalisco,638,686
+Michoacán,71,78
+Morelos,31,45
+México,406,430
+Nayarit,27,46
+Nuevo León,80,145
+Oaxaca,46,73
+Puebla,122,178
+Queretaro,67,52
+Quintana Roo,97,119
+San Luis Potosí,104,152
+Sinaloa,181,234
+Sonora,148,152
+Tabasco,277,326
+Tamaulipas,70,80
+Tlaxcala,76,78
+Veracruz,353,403
+Yucatán,72,69
+Zacatecas,34,46

@@ -44,6 +44,6 @@ Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. Pr�
 [Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://ncov.sinave.gob.mx/)
 [Mapa de Covid-19 en Méixco](https://ncov.sinave.gob.mx/mapa.aspx)
 
-[Gran trabajo del equipo de @guzmart en capturar los datos oficiales](https://github.com/guzmart/covid19_mex)
+[Gran trabajo del equipo de @guzmart en capturar los datos oficiales, caso por caso](https://github.com/guzmart/covid19_mex)
 
 [Datos de Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)

@@ -11,6 +11,7 @@ locale.setlocale(locale.LC_ALL, 'es_MX.utf8')
 
 
 def get_last_update_time():
+    """Trae el documento que contiene el mapa"""
     url = "http://ncov.sinave.gob.mx/mapa.aspx"
     headers = {
             'Connection': 'keep-alive',
@@ -33,19 +34,21 @@ def get_last_update_time():
 
 
 def get_data():
-    """Traer datos de SINAVE, scrappeados del mapa"""
+    """Trae los datos simulando XHR desde el mapa"""
     url = 'https://ncov.sinave.gob.mx/Mapa.aspx/Grafica22'
     headers = {
             'Connection': 'keep-alive',
             'Accept': '*/*',
             'DNT': '1',
             'X-Requested-With': 'XMLHttpRequest',
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/80.0.3987.122 Safari/537.36',
             'Content-Type': 'application/json; charset=UTF-8',
             'Origin': 'http://ncov.sinave.gob.mx',
             'Referer': 'http://ncov.sinave.gob.mx/mapa.aspx',
             'Accept-Language': 'en-US,en;q=0.9,es-419;q=0.8,es;q=0.7,gl;q=0.6',
-            'Cookie': 'acceptcookiefreecounterstat=ok; counter=062a8dcced58cba87445df457640d3dc; counter_nv=062a8dcced58cba87445df457640d3dc; acceptcookie=ok.'
+            'Cookie': 'acceptcookiefreecounterstat=ok; counter=062a8dcced58cba87445df457640d3dc; '''
+                      'counter_nv=062a8dcced58cba87445df457640d3dc; acceptcookie=ok.'
     }
 
     r = requests.post(url, headers=headers)
@@ -54,6 +57,7 @@ def get_data():
     with open(fname, 'w') as fo:
         fo.write(r.text)
     return r.json()['d']
+
 
 #def get_data_local():
 #    with open("datos_sinave-20200403_1116.json") as fin:
@@ -85,8 +89,9 @@ def update_time_series(df, current_time, last_update_time):
 
 
 #TODO: Cambiar por logging
-def msg(str):
-    print(str)
+def msg(text):
+    print(text)
+
 
 def main():
     current_time = datetime.datetime.today()

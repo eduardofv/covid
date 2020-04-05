@@ -35,7 +35,7 @@ Los datos son extraídos automáticamente aproximadamente 4 veces al día espera
 
 ## Gráficas
 
-Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. Prácticamente es replicar varias gráficas y visualizaciones que otros han realizado.
+Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. No es mas que las mismas gráficas reimplementadas con los datos que tenemos disponibles. Crea réplicas de los datos en directorios locales.
 
 [Notebook](covid.ipynb)
 

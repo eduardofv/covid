@@ -39,11 +39,14 @@ Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. No 
 
 [Notebook](covid.ipynb)
 
-## Fuentes de datos
+## Fuentes de datos y Repositorios
 
-[Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://ncov.sinave.gob.mx/)
-[Mapa de Covid-19 en Méixco](https://ncov.sinave.gob.mx/mapa.aspx)
-
-[Gran trabajo del equipo de @guzmart en capturar los datos oficiales, caso por caso](https://github.com/guzmart/covid19_mex)
-
-[Datos de Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
+- [Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://ncov.sinave.gob.mx/)
+- [Mapa de Covid-19 en Méixco](https://ncov.sinave.gob.mx/mapa.aspx)
+- [Datos de Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
+- [Gran trabajo del equipo de @guzmart en capturar los datos oficiales, caso por caso](https://github.com/guzmart/covid19_mex)
+- [Waldemar Quevedo, Herramienta para obtener datos recientes sobre la situación de COVID19 en México.](https://wallyqs.github.io/covid19mx/) y su [repositorio](https://github.com/wallyqs/covid19mx)
+- [Covidatos de Eli Parra](https://covidatos.mx/), muy buena [hoja de cálculo](https://docs.google.com/spreadsheets/d/1ihdwd-YY5h_wCkaaKVK0P70gjhxxRlLuNLYPQeJwrq8/edit?usp=sharing)
+- [Serendipia](https://serendipia.digital/2020/03/datos-abiertos-sobre-casos-de-coronavirus-covid-19-en-mexico/)
+- [@covidctdmx](https://twitter.com/covidctdmx) y su [repositorio](https://github.com/covidctdmx/covid_ctd_mx)
+- [@mariorz](https://twitter.com/mariorz) series de tiempo en el [repositorio](https://github.com/mariorz/covid19-mx-time-series)

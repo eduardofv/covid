@@ -53,7 +53,8 @@ def get_data():
 
     r = requests.post(url, headers=headers)
     #Guardar una copia antes de que pase otra cosa
-    fname = f"data/sinave/fuente/datos_sinave-{datetime.datetime.now().strftime('%Y%m%d_%H%M')}.json"
+    fname = f"data/sinave/fuente/datos_sinave-latest.json"
+    #fname = f"data/sinave/fuente/datos_sinave-{datetime.datetime.now().strftime('%Y%m%d_%H%M')}.json"
     with open(fname, 'w') as fo:
         fo.write(r.text)
     return r.json()['d']

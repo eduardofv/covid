@@ -25,10 +25,10 @@ de tiempo (un día por columna) por cada Estado, para cada una de las categoría
     - [Fallecimientos](data/sinave/series_tiempo/serie_tiempo_muertos.csv)
 
 - [Datos originales](data/sinave/fuente) contiene una copia de los datos tal como fueron extraídos del mapa. 
-El nombre es un *timestamp* del momento de la extracción. Dado que estos datos no son actualizados constantemente
-es muy posible que varios sean iguales.
+La última versión del archivo se guarda con 'latest' y las versiones anteriores se pueden acceder mediante commits anteriores. 
+Hasta el 2020-04-05 se guardaba un archivo con timestamp: el nombre es un *timestamp* del momento de la extracción. 
     
-Los datos son extraídos automáticamente aproximadamente 4 veces al día esperando tener los mas actualizados lo antes posible. 
+Los datos son extraídos automáticamente 2 veces al día esperando tener los mas actualizados lo antes posible. 
 
 **Limitante** Los datos están disponibles a partir del día que inicié este proyecto el 2 de Abril de 2020.
 

@@ -50,3 +50,7 @@ Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. No 
 - [Serendipia](https://serendipia.digital/2020/03/datos-abiertos-sobre-casos-de-coronavirus-covid-19-en-mexico/)
 - [@covidctdmx](https://twitter.com/covidctdmx) y su [repositorio](https://github.com/covidctdmx/covid_ctd_mx)
 - [@mariorz](https://twitter.com/mariorz) series de tiempo en el [repositorio](https://github.com/mariorz/covid19-mx-time-series)
+
+### Otros recursos interesantes
+- https://aatishb.com/covidtrends/
+- https://bnonews.com/index.php/2020/04/the-latest-coronavirus-cases/

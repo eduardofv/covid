@@ -29,7 +29,7 @@ for day in ['2020-03-30', '2020-03-31', '2020-04-01']:
             series[serie].at[estado['name'], day] = int(estado[eq[serie]])
 
 for serie in tipos:
-    columns = sorted(series[serie].columns[1:])
+    columns = sorted(series[serie].columns)
     series[serie] = series[serie].reindex(columns, axis=1)
     series[serie].to_csv(f"data/sinave_agregados/series_tiempo/serie_tiempo_{serie}.csv")
 

@@ -33,7 +33,8 @@ Hasta el 2020-04-05 se guardaba un archivo con timestamp: el nombre es un *times
     
 Los datos son extraídos automáticamente 2 veces al día esperando tener los mas actualizados lo antes posible. 
 
-**Limitante** Los datos están disponibles a partir del día que inicié este proyecto el 2 de Abril de 2020.
+**Limitante** Los datos están disponibles a partir del día que inicié este proyecto el 2 de Abril de 2020. 
+Hay 3 días adicionales de datos en el directorio secundario [data/sinave_agregados]()
 
 
 ## Gráficas

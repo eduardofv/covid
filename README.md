@@ -39,9 +39,9 @@ Hay 3 días adicionales de datos en el directorio secundario [data/sinave_agrega
 
 ## Gráficas
 
-Esto es replicando lo que mucha gente ha hecho, pero me sirve para aprender. No es mas que las mismas gráficas reimplementadas con los datos que tenemos disponibles. Crea réplicas de los datos en directorios locales.
+Este [notebook](covid.ipynb) tiene mis gráficas que son en realidad reimplementaciones de las que se pueden encontrar en muchos lados con los datos aquí disponibles. El dato mas interesante es el del número de casos de prueba reportados por día.
 
-[Notebook](covid.ipynb)
+Una copia actualizada automáticamente dos veces al día se puede consultar en este [notebook](covid.notebook.ipynb).
 
 ## Fuentes de datos y Repositorios
 

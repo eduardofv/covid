@@ -41,7 +41,7 @@ Hay 3 días adicionales de datos en el directorio secundario [data/sinave_agrega
 
 Este [notebook](covid.ipynb) tiene mis gráficas que son en realidad reimplementaciones de las que se pueden encontrar en muchos lados con los datos aquí disponibles. El dato mas interesante es el del número de casos de prueba reportados por día.
 
-Una copia actualizada automáticamente dos veces al día se puede consultar en este [notebook](covid.notebook.ipynb).
+Una copia actualizada automáticamente dos veces al día se puede consultar en este [notebook](covid.nbconvert.ipynb).
 
 ## Fuentes de datos y Repositorios
 

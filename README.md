@@ -41,12 +41,13 @@ Hay 3 días adicionales de datos en el directorio secundario [data/sinave_agrega
 
 Este [notebook](covid.ipynb) tiene mis gráficas que son en realidad reimplementaciones de las que se pueden encontrar en muchos lados con los datos aquí disponibles. El dato mas interesante es el del número de casos de prueba reportados por día.
 
-Una copia actualizada automáticamente dos veces al día se puede consultar en este [notebook](covid.nbconvert.ipynb).
+Una copia **actualizada automáticamente dos veces al día** se puede consultar en este [notebook](covid.nbconvert.ipynb).
 
 ## Fuentes de datos y Repositorios
 
 - [Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://ncov.sinave.gob.mx/)
 - [Mapa de Covid-19 en Méixco](https://ncov.sinave.gob.mx/mapa.aspx)
+- [Comunicado Técnico Diario, Dirección General de Epidemiología](https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449)
 - [Datos de Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
 - [Gran trabajo del equipo de @guzmart en capturar los datos oficiales, caso por caso](https://github.com/guzmart/covid19_mex)
 - [Waldemar Quevedo, Herramienta para obtener datos recientes sobre la situación de COVID19 en México.](https://wallyqs.github.io/covid19mx/) y su [repositorio](https://github.com/wallyqs/covid19mx)

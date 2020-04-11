@@ -135,7 +135,7 @@ def trajectories(datasets, locations, metric, new_metric=None, since=50, window=
         plt.plot(cum[-len(new):], new)
     plt.legend(locations)
     plt.xlabel(f"total {metric} cases (log)")
-    plt.ylabel(f"{new_metric} last days (log)")
+    plt.ylabel(f"{new_metric} last {window} days (log)")
 
 JH_DATASETS = ['confirmed', 'deaths', 'recovered']
 def transform_johns_hopkins(df):

@@ -25,7 +25,7 @@ de tiempo (un día por columna) por cada Estado, para cada una de las categoría
     - [Fallecimientos](data/sinave/series_tiempo/serie_tiempo_muertos.csv)
 
 - [Series de Tiempo con datos adicionales](data/sinave_agregados/series_tiempo) contiene archivos equivalentes a los 
-mencionados arriba pero con datos anteriores al 2 de Abril agregados del [repositorio de @mariorz](https://github.com/mariorz/covid19-mx-time-series). 
+mencionados arriba pero con tres días anteriores agregados del [repositorio de @wallyqs](https://github.com/wallyqs/covid19mx). 
 Los datos scrapeados por este proyecto los voy a mantener en el directorio original. 
 - [Datos originales](data/sinave/fuente) contiene una copia de los datos tal como fueron extraídos del mapa. 
 La última versión del archivo se guarda con 'latest' y las versiones anteriores se pueden acceder mediante commits anteriores. 

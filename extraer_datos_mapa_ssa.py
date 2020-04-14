@@ -27,9 +27,9 @@ def get_last_update_time():
     }
 
     r = requests.get(url, headers=headers)
-    date_search = re.search('corte a las (.*)";', r.text)
+    date_search = re.search('Cierre con corte a las (.*)";', r.text)
     date_str = date_search.group(1)
-    data_date = datetime.datetime.strptime(date_str, "%H:%M  hrs, %d de %B de %Y")
+    data_date = datetime.datetime.strptime(date_str, "%H:%M hrs, %d de %B de %Y")
     return data_date
 
 
@@ -101,22 +101,25 @@ def main():
     msg("Leyendo datos del mapa")
     data = get_data()
 
-    msg("Obteniendo fecha de actualizacion")
-    last_update_time = get_last_update_time()
-    if last_update_time is None:
-        raise AttributeError("No se pudo recuperar la fecha de actualizacion.")
+    #msg("Obteniendo fecha de actualizacion")
+    #last_update_time = get_last_update_time()
+    #if last_update_time is None:
+    #    raise AttributeError("No se pudo recuperar la fecha de actualizacion.")
 
     msg("Procesando datos")
     original = json.loads(data)
     data = {}
     for item in original:
-        data[item[1]] = {
-            'ultima_actualizacion': last_update_time.strftime('%Y-%m-%d %H:%M'),
-            'probables': int(item[6]),
-            'confirmados': int(item[4]),
-            'descartados': int(item[5]),
-            'muertos': int(item[7])
-        }
+        if item[1] == "NACIONAL":
+            last_update_time = datetime.datetime.strptime(item[8], "%d de %B de %Y")
+        else:
+            data[item[1]] = {
+                'ultima_actualizacion': item[8],
+                'probables': int(item[6]),
+                'confirmados': int(item[4]),
+                'descartados': int(item[5]),
+                'muertos': int(item[7])
+            }
     df = pd.DataFrame(data).transpose().sort_index()
     df.index.name = "Estado"
 

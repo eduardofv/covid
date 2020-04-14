@@ -11,6 +11,7 @@ import seaborn as sns
 #get_ipython().run_line_magic('matplotlib', 'inline')
 #sns.set(style="whitegrid")
 FIGSIZE = [8, 5]
+OUTPUT_TYPE = "notebook"
 
 def get_new_per_day(df):
     new_per_day = {}
@@ -73,7 +74,8 @@ def graph_daily_metric(df,
                        log=False, 
                        ylabel=None, 
                        smooth=False,
-                       smooth_window=7):
+                       smooth_window=7,
+                       image_fn="output.png"):
     xlabel = None
     f, ax = plt.subplots(figsize=FIGSIZE)
     if log:
@@ -96,6 +98,8 @@ def graph_daily_metric(df,
     else:
         plt.xticks(rotation=45)
     plt.legend(df.columns)
+    if OUTPUT_TYPE == 'markdown':
+        plt.savefig(f"img/{image_fn}")
 
 #test
 #graph_daily_metric(world['daily_deaths'][["Mexico", "Italy", "Australia"]],
@@ -111,7 +115,8 @@ def analysis(datasets,
              log = True,
              since=100, 
              smooth=True, 
-             smooth_window=7):
+             smooth_window=7,
+             image_fn="output.png"):
     data = datasets[metric][locations]
     label = f"{metric}"
     graph_daily_metric(data,
@@ -119,8 +124,12 @@ def analysis(datasets,
                        since=since,
                        ylabel=label,
                        smooth=smooth,
-                       smooth_window=smooth_window)
-    display(data.tail(show_last_days))
+                       smooth_window=smooth_window,
+                       image_fn=image_fn)
+    if OUTPUT_TYPE == 'notebook':
+        display(data.tail(show_last_days))
+    else:
+        return data.tail(show_last_days)
 
 #Genius Eric & Aatish: https://aatishb.com/covidtrends/
 def trajectories(datasets, locations, metric, new_metric=None, since=50, window=7):

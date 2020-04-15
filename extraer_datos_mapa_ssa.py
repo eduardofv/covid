@@ -109,9 +109,12 @@ def main():
     msg("Procesando datos")
     original = json.loads(data)
     data = {}
+    date_format = "Cierre con corte a las %H:%M hrs, %d de %B de %Y"
+    last_update_time = datetime.datetime.strptime(original[0][8], date_format)
     for item in original:
         if item[1] == "NACIONAL":
-            last_update_time = datetime.datetime.strptime(item[8], "%d de %B de %Y")
+            pass
+            #last_update_time = datetime.datetime.strptime(item[8], "%d de %B de %Y")
         else:
             data[item[1]] = {
                 'ultima_actualizacion': item[8],

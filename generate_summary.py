@@ -34,4 +34,6 @@ for metric in ['confirmados', 'muertos', 'pruebas']:
 with open('summary_template.md') as fin:
     template = fin.read()
 
-print(Template(template).substitute(res))
+with open('summary.md', 'w') as fout:
+    fout.write(Template(template).substitute(res))
+

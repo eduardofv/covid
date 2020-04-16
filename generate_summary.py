@@ -1,4 +1,5 @@
 #pip install tabulate
+import sys
 from string import Template
 import pandas as pd
 import seaborn as sns
@@ -34,6 +35,6 @@ for metric in ['confirmados', 'muertos', 'pruebas']:
 with open('summary_template.md') as fin:
     template = fin.read()
 
-with open('summary.md', 'w') as fout:
+with open(sys.argv[1], 'w') as fout:
     fout.write(Template(template).substitute(res))
 

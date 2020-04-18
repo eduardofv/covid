@@ -5,7 +5,7 @@
 Tratando de ayudar a quien le puedan ser útiles estos datos ya que los formatos en que [Secretaría de Salud los ha estado publicando](https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449) 
 no son los mejores para análisis y visualización.
 
-Los siguientes datos son "semioficiales" ya que son extraídos del [mapa de México](https://ncov.sinave.gob.mx/mapa.aspx) 
+Los siguientes datos son "semioficiales" ya que son extraídos del [mapa de México](https://covid19.sinave.gob.mx/mapa.aspx) 
 en el sitio del **Sistema Nacional de Vigilancia Epidemiológica**. Los datos son almacenados tal como se extraen
 del mapa y luego son procesados para generar archivos en un formato *similar* a los publicados en el repositorio de 
 [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series):
@@ -49,7 +49,7 @@ Estoy manteniendo este repostorio [directorio_covid19_mx](https://eduardofv.gith
 
 ## Fuentes de datos 
 
-- [Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://ncov.sinave.gob.mx/)
-- [Mapa de Covid-19 en México](https://ncov.sinave.gob.mx/mapa.aspx)
+- [Sistema Nacional de Vigilancia Epidemiológica (sinave)](https://covid19.sinave.gob.mx/)
+- [Mapa de Covid-19 en México](https://covid19.sinave.gob.mx/mapa.aspx)
 - [Comunicado Técnico Diario, Dirección General de Epidemiología](https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449)
 - [Datos de Johns Hopkins](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)

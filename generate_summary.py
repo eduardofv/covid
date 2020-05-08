@@ -11,7 +11,8 @@ estados_analisis = ["Ciudad de México", "Nuevo León", "Jalisco", "Queretaro"]
 ca.OUTPUT_TYPE = "markdown"
 
 res = {}
-estados = ca.load_sinave()
+estados = ca.load_mariorz()
+print(estados)
 mexico = {}
 for ds_name, ds in estados.items():
     mexico[ds_name] = pd.DataFrame({'Mexico': ds.sum(axis=1)})

@@ -24,11 +24,14 @@ def get_new_per_day(df):
     df_new_per_day.index = df.index[1:]
     return df_new_per_day
 
-def load_collection(tables, get_function):
+def load_collection(tables, get_function, tables_names=None):
     collection = {}
-    for dset in tables:
-        collection[dset]= get_function(dset)
-        collection[f"daily_{dset}"] = get_new_per_day(collection[dset])
+    if tables_names is None:
+        tables_names = tables
+    for index, dset in enumerate(tables):
+        t_name = tables_names[index]
+        collection[t_name] = get_function(dset)
+        collection[f"daily_{t_name}"] = get_new_per_day(collection[t_name])
     return collection
 
 def calculate_new_last_period(df_new_per_day, PERIOD=7):
@@ -170,21 +173,35 @@ def get_johns_hopkins(kind='confirmed'):
 def load_johns_hopkins():
     return load_collection(JH_DATASETS, get_johns_hopkins)
 
-SINAVE_DATASETS = ['confirmados', 'probables', 'muertos', 'descartados']
-
-def transform_sinave_eduardofv(df):
-    df = df.groupby('Estado').sum()
+def transform_timeseries(df, state_column='Estado', date_format='%Y/%m/%d'):
+    df = df.groupby(state_column).sum()
     df = df.transpose()
-    df.index = pd.to_datetime(df.index, format='%Y/%m/%d')
+    df.index = pd.to_datetime(df.index, format=date_format)
     df.index.name = "Date"
     return df#[columns]
+
+SINAVE_DATASETS = ['confirmados', 'probables', 'muertos', 'descartados']
 
 def get_sinave_eduardofv(kind="confirmados"):
     assert kind in SINAVE_DATASETS
     url = f"https://raw.githubusercontent.com/eduardofv/covid/master/data/sinave_agregados/series_tiempo/serie_tiempo_{kind}.csv"
     df = pd.read_csv(url)
-    df = transform_sinave_eduardofv(df)
+    df = transform_timeseries(df)
     return df
 
 def load_sinave():
     return load_collection(SINAVE_DATASETS, get_sinave_eduardofv)
+
+MARIORZ_DATASETS = ['confirmed', 'suspects', 'deaths', 'negatives']
+
+def get_mariorz(kind):
+    url = f"https://raw.githubusercontent.com/mariorz/covid19-mx-time-series/master/data/covid19_{kind}_mx.csv"
+    df = pd.read_csv(url)
+    df = transform_timeseries(df, date_format='%d-%m-%Y')
+    return df
+
+def load_mariorz():
+    return load_collection(
+        MARIORZ_DATASETS,
+        get_mariorz,
+        tables_names=SINAVE_DATASETS)
